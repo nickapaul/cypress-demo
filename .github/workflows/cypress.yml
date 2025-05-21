@@ -23,4 +23,6 @@ jobs:
         run: npm ci
 
       - name: Run Cypress tests
-        run: npx cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          record: true # set to true if you want to record to Cypress Dashboard
