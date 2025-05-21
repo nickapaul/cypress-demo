@@ -34,6 +34,16 @@ class Navigation {
     clickDeleteAccount(){
         cy.contains(' Delete Account').should('be.visible').click();
     }
+
+    getLoggedInUserName(){
+        return cy.get('[class="fa fa-user"]').should('be.visible').invoke('text').then((text) => {
+            return text.trim();
+        });
+    }
+
+    clickLogOut(){
+        cy.contains(' Logout').should('be.visible').click();
+    }
 }
 
 module.exports = new Navigation();
