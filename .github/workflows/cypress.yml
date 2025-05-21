@@ -25,4 +25,4 @@ jobs:
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
         with:
-          record: false # set to true if you want to record to Cypress Dashboard
+          record: false 
